@@ -1,0 +1,184 @@
+C51 COMPILER V9.01   LCD                                                                   04/12/2016 19:27:35 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LCD
+OBJECT MODULE PLACED IN lcd.OBJ
+COMPILER INVOKED BY: C:\Keil_v4\C51\BIN\C51.EXE lcd.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include<clock.h>
+   3          extern int data second[3];
+   4          unsigned char timedisplay[14]={0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+   5          sbit LCD_E = P1^2;
+   6          sbit LCD_RW = P1^1;
+   7          sbit LCD_RS = P1^0;
+   8          sbit HC164_SDAT = P1^3;
+   9          sbit HC164_SCLK = P1^4;
+  10          extern clockTypeDef clock;
+  11          char position = 0;
+  12          unsigned char flash = 0;
+  13          unsigned char j = 0;
+  14          unsigned char code ascii[]={"0123456789"};
+  15          void send_data(unsigned char dat) {
+  16   1              unsigned char i;
+  17   1              for(i = 0; i < 8; i++){
+  18   2                      HC164_SCLK = 0;
+  19   2                      if(dat & 0x80){
+  20   3                              HC164_SDAT = 1;
+  21   3                      }
+  22   2                      else{
+  23   3                              HC164_SDAT = 0;
+  24   3                      }
+  25   2                      HC164_SCLK = 1;
+  26   2                      dat = dat << 1;
+  27   2              }
+  28   1      }
+  29          
+  30          void Delay1ms(unsigned int c) {
+  31   1              unsigned char a,b;
+  32   1              for(; c>0; c--) {
+  33   2                      for(b = 199; b > 0; b--) {
+  34   3                              for(a = 1; a > 0; a--);
+  35   3                      }
+  36   2              }
+  37   1      }
+  38          
+  39          void LcdWrCmd(unsigned char com) {
+  40   1              unsigned char x;
+  41   1              LCD_E = 0;
+  42   1              LCD_RS = 0;
+  43   1              LCD_RW = 0;
+  44   1              
+  45   1              send_data(com);
+  46   1              x++;
+  47   1              LCD_E = 1;
+  48   1              x++;
+  49   1              LCD_E = 0;
+  50   1              Delay1ms(1);
+  51   1      }
+  52          void LcdWrData(unsigned char dat) {
+  53   1              unsigned char x;
+  54   1              LCD_E = 0;
+  55   1              LCD_RS = 1;
+C51 COMPILER V9.01   LCD                                                                   04/12/2016 19:27:35 PAGE 2   
+
+  56   1              LCD_RW = 0;
+  57   1      
+  58   1              send_data(dat);
+  59   1              x++;
+  60   1              LCD_E = 1;
+  61   1              x++;
+  62   1              LCD_E = 0;
+  63   1              Delay1ms(1);
+  64   1      }
+  65          
+  66          void disp_line(unsigned char line) {
+  67   1              if(line == 0){
+  68   2                      LcdWrCmd(0x80 + 0x00);
+  69   2              }
+  70   1              else{
+  71   2                      LcdWrCmd(0x80 + 0x40);
+  72   2              }
+  73   1      }
+  74          
+  75          void LcdInit(){
+  76   1              /*char code year []={0x04,0x0F,0x12,0x0F,0x0A,0x1F,0x02,0x02,};
+  77   1              char code month []={0x00,0x0F,0x09,0x0F,0x09,0x0F,0x09,0x13,};
+  78   1              char code day []={0x00,0x1F,0x11,0x11,0x1F,0x11,0x11,0x1F,};
+  79   1              char code path1 []={0x01,0x02,0x04,0x0A,0x02,0x02,0x02,0x02,};
+  80   1              char code path2 []={0x1E,0x02,0x1F,0x08,0x1E,0x04,0x1F,0x0A,};
+  81   1              char code path3 []={0x15,0x1F,0x00,0x1F,0x01,0x1F,0x10,0x1C,};
+  82   1              char code path4 []={0x0E,0x0A,0x0A,0x0A,0x0A,0x0A,0x0A,0x13,}; */
+  83   1              LcdWrCmd(0x38);
+  84   1              LcdWrCmd(0x0c);
+  85   1              LcdWrCmd(0x06);
+  86   1              LcdWrCmd(0x01);
+  87   1              /*Delay1ms(50);
+  88   1              LcdWrCmd(0x40);
+  89   1              for(i = 0; i < 8; i++)
+  90   1                      LcdWrData(year [i]);
+  91   1              for(i = 0; i < 8; i++)
+  92   1                      LcdWrData(month [i]);
+  93   1              for(i = 0; i < 8; i++)
+  94   1                      LcdWrData(day [i]);
+  95   1              for(i = 0; i < 8; i++)
+  96   1                      LcdWrData(path1 [i]);
+  97   1              for(i = 0; i < 8; i++)
+  98   1                      LcdWrData(path2 [i]);
+  99   1              for(i = 0; i < 8; i++)
+ 100   1                      LcdWrData(path3 [i]);
+ 101   1              for(i = 0; i < 8; i++)
+ 102   1                      LcdWrData(path4 [i]);*/
+ 103   1      }
+ 104          void second_display() {
+ 105   1              LcdWrCmd(0x01);
+ 106   1              disp_line(0);
+ 107   1              LcdWrData(ascii[second[0]/10]);
+ 108   1              LcdWrData(ascii[second[0]%10]);
+ 109   1              LcdWrData(0x27);
+ 110   1              LcdWrData(ascii[second[1]/10]);
+ 111   1              LcdWrData(ascii[second[1]%10]);
+ 112   1              LcdWrData('"');
+ 113   1              LcdWrData(ascii[second[2]/10]);
+ 114   1              LcdWrData(ascii[second[2]%10]); 
+ 115   1      }
+ 116          
+ 117          void time_display(){
+C51 COMPILER V9.01   LCD                                                                   04/12/2016 19:27:35 PAGE 3   
+
+ 118   1              unsigned char i;
+ 119   1              timedisplay[0] = clock.Year/1000;
+ 120   1              timedisplay[1] = clock.Year/100%10;
+ 121   1              timedisplay[2] = clock.Year/10%10;
+ 122   1              timedisplay[3] = clock.Year%10;
+ 123   1              timedisplay[4] = clock.Month/10;
+ 124   1              timedisplay[5] = clock.Month%10;
+ 125   1              timedisplay[6] = clock.Day/10;
+ 126   1              timedisplay[7] = clock.Day%10;
+ 127   1              timedisplay[8] = clock.Hour/10;
+ 128   1              timedisplay[9] = clock.Hour%10;
+ 129   1              timedisplay[10] = clock.Minute/10;
+ 130   1              timedisplay[11] = clock.Minute%10;
+ 131   1              timedisplay[12] = clock.Second/10;
+ 132   1              timedisplay[13] = clock.Second%10;
+ 133   1              for(i = 0; i < 14; i ++){
+ 134   2                      if(i == 0)
+ 135   2                              disp_line(0);
+ 136   2                      if((i == 4)||(i == 6))
+ 137   2                              LcdWrData('-');
+ 138   2                      if(i == 8)
+ 139   2                              disp_line(1);
+ 140   2                      if((i == 10)||(i == 12))
+ 141   2                              LcdWrData(':');
+ 142   2                      if((i == position)&&(flash == 1)){
+ 143   3                              if(j >= 25){
+ 144   4                                      if(j >= 50){
+ 145   5                                              j = 0;
+ 146   5                                      }
+ 147   4                                      LcdWrData(' ');
+ 148   4                              }
+ 149   3                              else{
+ 150   4                                      LcdWrData(ascii[timedisplay[i]]);
+ 151   4                              }
+ 152   3                      }
+ 153   2                      else{
+ 154   3                              LcdWrData(ascii[timedisplay[i]]);
+ 155   3                      }
+ 156   2              }
+ 157   1       }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    565    ----
+   CONSTANT SIZE    =     11    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     17       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

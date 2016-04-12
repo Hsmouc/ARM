@@ -1,0 +1,8 @@
+"STARTUP.obj",
+"lcd.obj",
+"main.obj",
+"hc165.obj",
+"clock.obj",
+"key.obj" 
+TO "LCD" 
+RAMSIZE(256) 
