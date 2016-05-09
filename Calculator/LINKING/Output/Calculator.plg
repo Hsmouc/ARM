@@ -1,0 +1,958 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+\\psf\Home\Desktop\Calculator\Calculator.uvproj
+Project File Date:  05/06/2016
+
+<h2>Output:</h2>
+Build target 'Calculator'
+compiling calc.c...
+USR\CALC.C(44): warning C291: not every exit path returns a value
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYSCAN_TRANSFER?KEYSCAN_BASIC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LONGTOSTRING?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NUM_CALCULATE?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD_DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDWRDATA?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_ZLG7290KEY?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDDATA?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDCMD0?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLEAR_ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP_KEYCODE?ZLG7290
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+    ADDRESS: 04ADH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0582H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0585H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04F3H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 03F9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0405H
+Program Size: data=74.2 xdata=0 code=1683
+".\LINKING\Output\Calculator" - 0 Error(s), 23 Warning(s).
+Build target 'Calculator'
+compiling calc.c...
+USR\CALC.C(44): warning C291: not every exit path returns a value
+compiling display.c...
+USR\DISPLAY.C(4): error C141: syntax error near ')'
+Target not created
+Build target 'Calculator'
+compiling display.c...
+USR\DISPLAY.C(4): error C141: syntax error near ')'
+Target not created
+Build target 'Calculator'
+compiling display.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYSCAN_TRANSFER?KEYSCAN_BASIC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LONGTOSTRING?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NUM_CALCULATE?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDWRDATA?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_ZLG7290KEY?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDDATA?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDCMD0?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLEAR_ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP_KEYCODE?ZLG7290
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+    ADDRESS: 03EDH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0433H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0339H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0345H
+Program Size: data=72.2 xdata=0 code=1490
+".\LINKING\Output\Calculator" - 0 Error(s), 21 Warning(s).
+Build target 'Calculator'
+compiling display.c...
+USR\DISPLAY.C(4): error C141: syntax error near ')'
+USR\DISPLAY.C(5): error C141: syntax error near '='
+Target not created
+Build target 'Calculator'
+compiling display.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYSCAN_TRANSFER?KEYSCAN_BASIC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LONGTOSTRING?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NUM_CALCULATE?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD_DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDWRDATA?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_ZLG7290KEY?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDDATA?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDCMD0?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLEAR_ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP_KEYCODE?ZLG7290
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+    ADDRESS: 03EDH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0433H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0339H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0345H
+Program Size: data=72.2 xdata=0 code=1491
+".\LINKING\Output\Calculator" - 0 Error(s), 22 Warning(s).
+Build target 'Calculator'
+compiling main.c...
+compiling keyscan_advance.c...
+compiling keyscan_basic.c...
+compiling calc.c...
+USR\CALC.C(44): warning C291: not every exit path returns a value
+compiling display.c...
+USR\DISPLAY.C(4): error C141: syntax error near ')'
+compiling hc165.c...
+compiling lcd.c...
+compiling I2C.C...
+compiling ZLG7290.c...
+Target not created
+Build target 'Calculator'
+compiling display.c...
+USR\DISPLAY.C(4): warning C280: 'datas': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYSCAN_TRANSFER?KEYSCAN_BASIC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LONGTOSTRING?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NUM_CALCULATE?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDWRDATA?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_ZLG7290KEY?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDDATA?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDCMD0?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLEAR_ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP_KEYCODE?ZLG7290
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+    ADDRESS: 03EDH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0433H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0339H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0345H
+Program Size: data=74.2 xdata=0 code=1495
+".\LINKING\Output\Calculator" - 0 Error(s), 23 Warning(s).
+Build target 'Calculator'
+compiling display.c...
+USR\DISPLAY.C(4): error C141: syntax error near ')'
+Target not created
+Build target 'Calculator'
+compiling display.c...
+USR\DISPLAY.C(4): warning C280: 'num': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYSCAN_TRANSFER?KEYSCAN_BASIC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LONGTOSTRING?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NUM_CALCULATE?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDWRDATA?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_ZLG7290KEY?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDDATA?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDCMD0?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLEAR_ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP_KEYCODE?ZLG7290
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+    ADDRESS: 03EDH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0433H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0339H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0345H
+Program Size: data=74.2 xdata=0 code=1495
+".\LINKING\Output\Calculator" - 0 Error(s), 23 Warning(s).
+Build target 'Calculator'
+compiling display.c...
+USR\DISPLAY.C(4): warning C280: 'num': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYSCAN_TRANSFER?KEYSCAN_BASIC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LONGTOSTRING?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NUM_CALCULATE?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDWRDATA?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_ZLG7290KEY?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDDATA?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDCMD0?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLEAR_ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP_KEYCODE?ZLG7290
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+    ADDRESS: 03EDH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0433H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0339H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0345H
+Program Size: data=74.2 xdata=0 code=1495
+".\LINKING\Output\Calculator" - 0 Error(s), 23 Warning(s).
+Build target 'Calculator'
+compiling display.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYSCAN_TRANSFER?KEYSCAN_BASIC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NUM_CALCULATE?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDWRDATA?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_ZLG7290KEY?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDDATA?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDCMD0?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLEAR_ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP_KEYCODE?ZLG7290
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+    ADDRESS: 03EDH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0433H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0339H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0345H
+Program Size: data=85.2 xdata=0 code=1502
+".\LINKING\Output\Calculator" - 0 Error(s), 21 Warning(s).
+Build target 'Calculator'
+compiling main.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\DISPLAY.H(4): error C132: 'numTranfer': not in formal parameter list
+.\DRI\I2C.H(5): error C127: 'ack': invalid storage class
+.\DRI\I2C.H(7): error C127: 'I2C_temp': invalid storage class
+.\DRI\I2C.H(9): error C127: '_I2C_delay': invalid storage class
+.\DRI\I2C.H(17): error C127: 'Start_I2c': invalid storage class
+.\DRI\I2C.H(25): error C127: 'Stop_I2c': invalid storage class
+.\DRI\I2C.H(33): error C127: 'Ack_I2c': invalid storage class
+.\DRI\I2C.H(43): error C127: '_SendByte': invalid storage class
+.\DRI\I2C.H(51): error C127: 'RcvByte': invalid storage class
+.\DRI\I2C.H(61): error C127: '_ISendStr': invalid storage class
+.\DRI\I2C.H(71): error C127: '_IRcvStr': invalid storage class
+.\DRI\I2C.H(79): error C127: 'I2C_Init': invalid storage class
+USR\MAIN.C(6): error C132: 'main': not in formal parameter list
+USR\MAIN.C(6): error C141: syntax error near '{'
+USR\MAIN.C(7): error C132: 'hc165_init': not in formal parameter list
+USR\MAIN.C(8): error C132: 'I2C_Init': not in formal parameter list
+USR\MAIN.C(9): error C132: 'LcdInit': not in formal parameter list
+USR\MAIN.C(10): error C141: syntax error near 'while'
+USR\MAIN.C(10): error C141: syntax error near '1'
+USR\MAIN.C(12): error C231: 'key': redefinition
+compiling keyscan_advance.c...
+USR\KEYSCAN_ADVANCE.C(2): error C141: syntax error near ''
+compiling keyscan_basic.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\KEYSCAN_BASIC.H(4): error C132: '_keyscan_tranfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(6): error C127: 'step': invalid storage class
+USR\KEYSCAN_BASIC.C(7): error C132: '_keyscan_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(7): error C141: syntax error near '{'
+USR\KEYSCAN_BASIC.C(8): error C132: 'key_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(9): error C141: syntax error near 'switch'
+USR\KEYSCAN_BASIC.C(9): error C129: missing ';' before '{'
+compiling display.c...
+USR\DISPLAY.C(10): warning C206: 'LcdWrData': missing function-prototype
+USR\DISPLAY.C(10): error C267: 'LcdWrData': requires ANSI-style prototype
+USR\DISPLAY.C(11): error C187: not an lvalue
+compiling lcd.c...
+Target not created
+Build target 'Calculator'
+compiling main.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\DISPLAY.H(4): error C132: 'numTranfer': not in formal parameter list
+.\DRI\I2C.H(5): error C127: 'ack': invalid storage class
+.\DRI\I2C.H(7): error C127: 'I2C_temp': invalid storage class
+.\DRI\I2C.H(9): error C127: '_I2C_delay': invalid storage class
+.\DRI\I2C.H(17): error C127: 'Start_I2c': invalid storage class
+.\DRI\I2C.H(25): error C127: 'Stop_I2c': invalid storage class
+.\DRI\I2C.H(33): error C127: 'Ack_I2c': invalid storage class
+.\DRI\I2C.H(43): error C127: '_SendByte': invalid storage class
+.\DRI\I2C.H(51): error C127: 'RcvByte': invalid storage class
+.\DRI\I2C.H(61): error C127: '_ISendStr': invalid storage class
+.\DRI\I2C.H(71): error C127: '_IRcvStr': invalid storage class
+.\DRI\I2C.H(79): error C127: 'I2C_Init': invalid storage class
+USR\MAIN.C(6): error C132: 'main': not in formal parameter list
+USR\MAIN.C(6): error C141: syntax error near '{'
+USR\MAIN.C(7): error C132: 'hc165_init': not in formal parameter list
+USR\MAIN.C(8): error C132: 'I2C_Init': not in formal parameter list
+USR\MAIN.C(9): error C132: 'LcdInit': not in formal parameter list
+USR\MAIN.C(10): error C141: syntax error near 'while'
+USR\MAIN.C(10): error C141: syntax error near '1'
+USR\MAIN.C(12): error C231: 'key': redefinition
+compiling keyscan_advance.c...
+USR\KEYSCAN_ADVANCE.C(2): error C141: syntax error near ''
+compiling keyscan_basic.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\KEYSCAN_BASIC.H(4): error C132: '_keyscan_tranfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(6): error C127: 'step': invalid storage class
+USR\KEYSCAN_BASIC.C(7): error C132: '_keyscan_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(7): error C141: syntax error near '{'
+USR\KEYSCAN_BASIC.C(8): error C132: 'key_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(9): error C141: syntax error near 'switch'
+USR\KEYSCAN_BASIC.C(9): error C129: missing ';' before '{'
+compiling calc.c...
+USR\CALC.C(44): warning C291: not every exit path returns a value
+compiling display.c...
+USR\DISPLAY.C(10): warning C206: 'LcdWrData': missing function-prototype
+USR\DISPLAY.C(10): error C267: 'LcdWrData': requires ANSI-style prototype
+compiling hc165.c...
+compiling lcd.c...
+compiling I2C.C...
+compiling ZLG7290.c...
+Target not created
+Build target 'Calculator'
+compiling main.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\DISPLAY.H(4): error C132: 'numTranfer': not in formal parameter list
+.\DRI\I2C.H(5): error C127: 'ack': invalid storage class
+.\DRI\I2C.H(7): error C127: 'I2C_temp': invalid storage class
+.\DRI\I2C.H(9): error C127: '_I2C_delay': invalid storage class
+.\DRI\I2C.H(17): error C127: 'Start_I2c': invalid storage class
+.\DRI\I2C.H(25): error C127: 'Stop_I2c': invalid storage class
+.\DRI\I2C.H(33): error C127: 'Ack_I2c': invalid storage class
+.\DRI\I2C.H(43): error C127: '_SendByte': invalid storage class
+.\DRI\I2C.H(51): error C127: 'RcvByte': invalid storage class
+.\DRI\I2C.H(61): error C127: '_ISendStr': invalid storage class
+.\DRI\I2C.H(71): error C127: '_IRcvStr': invalid storage class
+.\DRI\I2C.H(79): error C127: 'I2C_Init': invalid storage class
+USR\MAIN.C(6): error C132: 'main': not in formal parameter list
+USR\MAIN.C(6): error C141: syntax error near '{'
+USR\MAIN.C(7): error C132: 'hc165_init': not in formal parameter list
+USR\MAIN.C(8): error C132: 'I2C_Init': not in formal parameter list
+USR\MAIN.C(9): error C132: 'LcdInit': not in formal parameter list
+USR\MAIN.C(10): error C141: syntax error near 'while'
+USR\MAIN.C(10): error C141: syntax error near '1'
+USR\MAIN.C(12): error C231: 'key': redefinition
+compiling keyscan_advance.c...
+USR\KEYSCAN_ADVANCE.C(2): error C141: syntax error near ''
+compiling keyscan_basic.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\KEYSCAN_BASIC.H(4): error C132: '_keyscan_tranfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(6): error C127: 'step': invalid storage class
+USR\KEYSCAN_BASIC.C(7): error C132: '_keyscan_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(7): error C141: syntax error near '{'
+USR\KEYSCAN_BASIC.C(8): error C132: 'key_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(9): error C141: syntax error near 'switch'
+USR\KEYSCAN_BASIC.C(9): error C129: missing ';' before '{'
+compiling display.c...
+Target not created
+Build target 'Calculator'
+compiling main.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\DISPLAY.H(4): error C132: 'numTranfer': not in formal parameter list
+.\DRI\I2C.H(5): error C127: 'ack': invalid storage class
+.\DRI\I2C.H(7): error C127: 'I2C_temp': invalid storage class
+.\DRI\I2C.H(9): error C127: '_I2C_delay': invalid storage class
+.\DRI\I2C.H(17): error C127: 'Start_I2c': invalid storage class
+.\DRI\I2C.H(25): error C127: 'Stop_I2c': invalid storage class
+.\DRI\I2C.H(33): error C127: 'Ack_I2c': invalid storage class
+.\DRI\I2C.H(43): error C127: '_SendByte': invalid storage class
+.\DRI\I2C.H(51): error C127: 'RcvByte': invalid storage class
+.\DRI\I2C.H(61): error C127: '_ISendStr': invalid storage class
+.\DRI\I2C.H(71): error C127: '_IRcvStr': invalid storage class
+.\DRI\I2C.H(79): error C127: 'I2C_Init': invalid storage class
+USR\MAIN.C(6): error C132: 'main': not in formal parameter list
+USR\MAIN.C(6): error C141: syntax error near '{'
+USR\MAIN.C(7): error C132: 'hc165_init': not in formal parameter list
+USR\MAIN.C(8): error C132: 'I2C_Init': not in formal parameter list
+USR\MAIN.C(9): error C132: 'LcdInit': not in formal parameter list
+USR\MAIN.C(10): error C141: syntax error near 'while'
+USR\MAIN.C(10): error C141: syntax error near '1'
+USR\MAIN.C(12): error C231: 'key': redefinition
+compiling keyscan_advance.c...
+USR\KEYSCAN_ADVANCE.C(2): error C141: syntax error near ''
+compiling keyscan_basic.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\KEYSCAN_BASIC.H(4): error C132: '_keyscan_tranfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(6): error C127: 'step': invalid storage class
+USR\KEYSCAN_BASIC.C(7): error C132: '_keyscan_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(7): error C141: syntax error near '{'
+USR\KEYSCAN_BASIC.C(8): error C132: 'key_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(9): error C141: syntax error near 'switch'
+USR\KEYSCAN_BASIC.C(9): error C129: missing ';' before '{'
+compiling display.c...
+Target not created
+compiling display.c...
+USR\display.c - 0 Error(s), 0 Warning(s).
+compiling display.c...
+USR\display.c - 0 Error(s), 0 Warning(s).
+Build target 'Calculator'
+compiling main.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\DISPLAY.H(4): error C132: 'numTranfer': not in formal parameter list
+.\DRI\I2C.H(5): error C127: 'ack': invalid storage class
+.\DRI\I2C.H(7): error C127: 'I2C_temp': invalid storage class
+.\DRI\I2C.H(9): error C127: '_I2C_delay': invalid storage class
+.\DRI\I2C.H(17): error C127: 'Start_I2c': invalid storage class
+.\DRI\I2C.H(25): error C127: 'Stop_I2c': invalid storage class
+.\DRI\I2C.H(33): error C127: 'Ack_I2c': invalid storage class
+.\DRI\I2C.H(43): error C127: '_SendByte': invalid storage class
+.\DRI\I2C.H(51): error C127: 'RcvByte': invalid storage class
+.\DRI\I2C.H(61): error C127: '_ISendStr': invalid storage class
+.\DRI\I2C.H(71): error C127: '_IRcvStr': invalid storage class
+.\DRI\I2C.H(79): error C127: 'I2C_Init': invalid storage class
+USR\MAIN.C(6): error C132: 'main': not in formal parameter list
+USR\MAIN.C(6): error C141: syntax error near '{'
+USR\MAIN.C(7): error C132: 'hc165_init': not in formal parameter list
+USR\MAIN.C(8): error C132: 'I2C_Init': not in formal parameter list
+USR\MAIN.C(9): error C132: 'LcdInit': not in formal parameter list
+USR\MAIN.C(10): error C141: syntax error near 'while'
+USR\MAIN.C(10): error C141: syntax error near '1'
+USR\MAIN.C(12): error C231: 'key': redefinition
+compiling keyscan_advance.c...
+USR\KEYSCAN_ADVANCE.C(2): error C141: syntax error near ''
+compiling keyscan_basic.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\KEYSCAN_BASIC.H(4): error C132: '_keyscan_tranfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(6): error C127: 'step': invalid storage class
+USR\KEYSCAN_BASIC.C(7): error C132: '_keyscan_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(7): error C141: syntax error near '{'
+USR\KEYSCAN_BASIC.C(8): error C132: 'key_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(9): error C141: syntax error near 'switch'
+USR\KEYSCAN_BASIC.C(9): error C129: missing ';' before '{'
+Target not created
+Build target 'Calculator'
+compiling main.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\DISPLAY.H(4): error C132: 'numTranfer': not in formal parameter list
+.\DRI\I2C.H(5): error C127: 'ack': invalid storage class
+.\DRI\I2C.H(7): error C127: 'I2C_temp': invalid storage class
+.\DRI\I2C.H(9): error C127: '_I2C_delay': invalid storage class
+.\DRI\I2C.H(17): error C127: 'Start_I2c': invalid storage class
+.\DRI\I2C.H(25): error C127: 'Stop_I2c': invalid storage class
+.\DRI\I2C.H(33): error C127: 'Ack_I2c': invalid storage class
+.\DRI\I2C.H(43): error C127: '_SendByte': invalid storage class
+.\DRI\I2C.H(51): error C127: 'RcvByte': invalid storage class
+.\DRI\I2C.H(61): error C127: '_ISendStr': invalid storage class
+.\DRI\I2C.H(71): error C127: '_IRcvStr': invalid storage class
+.\DRI\I2C.H(79): error C127: 'I2C_Init': invalid storage class
+USR\MAIN.C(6): error C132: 'main': not in formal parameter list
+USR\MAIN.C(6): error C141: syntax error near '{'
+USR\MAIN.C(7): error C132: 'hc165_init': not in formal parameter list
+USR\MAIN.C(8): error C132: 'I2C_Init': not in formal parameter list
+USR\MAIN.C(9): error C132: 'LcdInit': not in formal parameter list
+USR\MAIN.C(10): error C141: syntax error near 'while'
+USR\MAIN.C(10): error C141: syntax error near '1'
+USR\MAIN.C(12): error C231: 'key': redefinition
+compiling keyscan_advance.c...
+USR\KEYSCAN_ADVANCE.C(2): error C141: syntax error near ''
+compiling keyscan_basic.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\KEYSCAN_BASIC.H(4): error C132: '_keyscan_tranfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(6): error C127: 'step': invalid storage class
+USR\KEYSCAN_BASIC.C(7): error C132: '_keyscan_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(7): error C141: syntax error near '{'
+USR\KEYSCAN_BASIC.C(8): error C132: 'key_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(9): error C141: syntax error near 'switch'
+USR\KEYSCAN_BASIC.C(9): error C129: missing ';' before '{'
+compiling calc.c...
+USR\CALC.C(44): warning C291: not every exit path returns a value
+compiling display.c...
+compiling hc165.c...
+compiling lcd.c...
+compiling I2C.C...
+compiling ZLG7290.c...
+Target not created
+Build target 'Calculator'
+compiling main.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\DISPLAY.H(4): error C132: 'numTranfer': not in formal parameter list
+.\DRI\I2C.H(5): error C127: 'ack': invalid storage class
+.\DRI\I2C.H(7): error C127: 'I2C_temp': invalid storage class
+.\DRI\I2C.H(9): error C127: '_I2C_delay': invalid storage class
+.\DRI\I2C.H(17): error C127: 'Start_I2c': invalid storage class
+.\DRI\I2C.H(25): error C127: 'Stop_I2c': invalid storage class
+.\DRI\I2C.H(33): error C127: 'Ack_I2c': invalid storage class
+.\DRI\I2C.H(43): error C127: '_SendByte': invalid storage class
+.\DRI\I2C.H(51): error C127: 'RcvByte': invalid storage class
+.\DRI\I2C.H(61): error C127: '_ISendStr': invalid storage class
+.\DRI\I2C.H(71): error C127: '_IRcvStr': invalid storage class
+.\DRI\I2C.H(79): error C127: 'I2C_Init': invalid storage class
+USR\MAIN.C(6): error C132: 'main': not in formal parameter list
+USR\MAIN.C(6): error C141: syntax error near '{'
+USR\MAIN.C(7): error C132: 'hc165_init': not in formal parameter list
+USR\MAIN.C(8): error C132: 'I2C_Init': not in formal parameter list
+USR\MAIN.C(10): error C141: syntax error near 'while'
+USR\MAIN.C(10): error C141: syntax error near '1'
+USR\MAIN.C(12): error C231: 'key': redefinition
+compiling keyscan_advance.c...
+USR\KEYSCAN_ADVANCE.C(2): error C141: syntax error near ''
+compiling keyscan_basic.c...
+.\DRI\HC165.H(4): error C132: 'hc165_init': not in formal parameter list
+.\DRI\HC165.H(5): error C132: 'hc165_re': not in formal parameter list
+.\USR\KEYSCAN_BASIC.H(4): error C132: '_keyscan_tranfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(6): error C127: 'step': invalid storage class
+USR\KEYSCAN_BASIC.C(7): error C132: '_keyscan_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(7): error C141: syntax error near '{'
+USR\KEYSCAN_BASIC.C(8): error C132: 'key_transfer': not in formal parameter list
+USR\KEYSCAN_BASIC.C(9): error C141: syntax error near 'switch'
+USR\KEYSCAN_BASIC.C(9): error C129: missing ';' before '{'
+compiling calc.c...
+USR\CALC.C(44): warning C291: not every exit path returns a value
+compiling display.c...
+compiling hc165.c...
+compiling lcd.c...
+compiling I2C.C...
+compiling ZLG7290.c...
+Target not created
+Build target 'Calculator'
+compiling main.c...
+compiling keyscan_advance.c...
+compiling keyscan_basic.c...
+compiling calc.c...
+USR\CALC.C(44): warning C291: not every exit path returns a value
+compiling display.c...
+compiling hc165.c...
+compiling lcd.c...
+compiling I2C.C...
+compiling ZLG7290.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYSCAN_TRANSFER?KEYSCAN_BASIC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NUM_CALCULATE?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDWRDATA?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_ZLG7290KEY?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDDATA?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDCMD0?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLEAR_ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP_KEYCODE?ZLG7290
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+    ADDRESS: 03EDH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 04C5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0433H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0339H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0345H
+Program Size: data=85.2 xdata=0 code=1525
+".\LINKING\Output\Calculator" - 0 Error(s), 22 Warning(s).
+Build target 'Calculator'
+compiling main.c...
+compiling keyscan_advance.c...
+compiling keyscan_basic.c...
+compiling calc.c...
+USR\CALC.C(44): warning C291: not every exit path returns a value
+compiling display.c...
+USR\DISPLAY.C(10): warning C206: 'LcdWrData': missing function-prototype
+USR\DISPLAY.C(10): error C267: 'LcdWrData': requires ANSI-style prototype
+USR\DISPLAY.C(11): error C187: not an lvalue
+compiling hc165.c...
+compiling lcd.c...
+compiling I2C.C...
+compiling ZLG7290.c...
+Target not created
+Build target 'Calculator'
+compiling main.c...
+compiling keyscan_advance.c...
+compiling keyscan_basic.c...
+compiling calc.c...
+USR\CALC.C(44): warning C291: not every exit path returns a value
+compiling display.c...
+USR\DISPLAY.C(12): error C187: not an lvalue
+compiling hc165.c...
+compiling lcd.c...
+compiling I2C.C...
+compiling ZLG7290.c...
+Target not created
+Build target 'Calculator'
+compiling main.c...
+compiling keyscan_advance.c...
+compiling keyscan_basic.c...
+compiling calc.c...
+USR\CALC.C(44): warning C291: not every exit path returns a value
+compiling display.c...
+compiling hc165.c...
+compiling lcd.c...
+compiling I2C.C...
+compiling ZLG7290.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYSCAN_TRANSFER?KEYSCAN_BASIC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_NUM_CALCULATE?CALC
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_DISPLAY?DISPLAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_ZLG7290KEY?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDDATA?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_ZLG7290_SENDCMD0?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLEAR_ZLG7290_DISP?ZLG7290
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ZLG7290_DISP_KEYCODE?ZLG7290
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _KEYSCAN_TRANFER
+    MODULE:  .\LINKING\Output\calc.obj (CALC)
+    ADDRESS: 0433H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_PRESS
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0508H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 050BH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISP_BUF
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 0479H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 037FH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  KEY_CODE
+    MODULE:  .\LINKING\Output\ZLG7290.obj (ZLG7290)
+    ADDRESS: 038BH
+Program Size: data=78.2 xdata=0 code=1583
+".\LINKING\Output\Calculator" - 0 Error(s), 21 Warning(s).
