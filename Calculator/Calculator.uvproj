@@ -357,11 +357,6 @@
               <FilePath>.\USR\keyscan_advance.c</FilePath>
             </File>
             <File>
-              <FileName>keyscan_basic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USR\keyscan_basic.c</FilePath>
-            </File>
-            <File>
               <FileName>calc.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\USR\calc.c</FilePath>
@@ -370,6 +365,11 @@
               <FileName>display.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\USR\display.c</FilePath>
+            </File>
+            <File>
+              <FileName>keyscan_basic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USR\keyscan_basic.c</FilePath>
             </File>
           </Files>
         </Group>

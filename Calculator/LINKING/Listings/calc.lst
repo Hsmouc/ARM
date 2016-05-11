@@ -1,10 +1,10 @@
-C51 COMPILER V9.01   CALC                                                                  05/10/2016 23:03:05 PAGE 1   
+C51 COMPILER V9.01   CALC                                                                  05/11/2016 18:23:40 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE CALC
 OBJECT MODULE PLACED IN .\LINKING\Output\calc.obj
-COMPILER INVOKED BY: C:\Keil_v4\C51\BIN\C51.EXE USR\calc.c BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG OBJECTEXTEND PRINT(.\L
-                    -INKING\Listings\calc.lst) OBJECT(.\LINKING\Output\calc.obj)
+COMPILER INVOKED BY: C:\Program Files (x86)\KEIL_v4\C51\BIN\C51.EXE USR\calc.c BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG OB
+                    -JECTEXTEND PRINT(.\LINKING\Listings\calc.lst) OBJECT(.\LINKING\Output\calc.obj)
 
 line level    source
 
@@ -13,7 +13,7 @@ line level    source
    3          #include<hc165.h>
    4          int num_temp = 0;
    5          unsigned char buf[12];
-   6          unsigned char step = 0;
+   6          extern unsigned char step;
    7          unsigned char LongToString(int dat){
    8   1          signed char i = 0;
    9   1          unsigned char len = 0;
@@ -34,36 +34,33 @@ line level    source
   24   1              return len;
   25   1      }
   26          
-  27          int num_transfer(unsigned char key) {
-  28   1              num_temp = num_temp*10 + keyscan_tranfer(key);
-  29   1              return num_temp;
-  30   1      }
-  31          
-  32          int num_calculate(unsigned char key) {
-  33   1              int data_1,data_2,result;
-  34   1              if(step == 0)
-  35   1                      data_1 = num_transfer(key);
-  36   1              else
-  37   1                      data_2 = num_transfer(key);
-  38   1              switch(key) {
-  39   2                      case 0x80: result = data_1 + data_2; step = 0; return result;
-  40   2                      default: return 0;
-  41   2              }       
-  42   1      } 
-  43          
+  27          int number_transfer(int key_transfer) {
+  28   1      
+  29   1              num_temp = num_temp*10 + key_transfer;
+  30   1              return num_temp;
+  31   1      }
+  32          
+  33          int number_calculate(int num_1, int num_2,unsigned char key) {
+  34   1              int result;
+  35   1              switch(key){
+  36   2                      case 0x04: result = num_1 + num_2; break;
+  37   2                      case 0x08: result = num_1 - num_2; break;
+  38   2                      case 0x0C: result = num_1 * num_2; break;
+  39   2              }
+  40   1              return result;  
+  41   1      } 
+  42          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    163    ----
+   CODE SIZE        =    158    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =     15       7
+   DATA SIZE        =     14       2
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
-
-C51 COMPILER V9.01   CALC                                                                  05/10/2016 23:03:05 PAGE 2   
 
 
 C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

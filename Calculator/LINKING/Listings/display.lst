@@ -1,10 +1,10 @@
-C51 COMPILER V9.01   DISPLAY                                                               05/10/2016 23:03:05 PAGE 1   
+C51 COMPILER V9.01   DISPLAY                                                               05/11/2016 18:23:40 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE DISPLAY
 OBJECT MODULE PLACED IN .\LINKING\Output\display.obj
-COMPILER INVOKED BY: C:\Keil_v4\C51\BIN\C51.EXE USR\display.c BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG OBJECTEXTEND PRINT(
-                    -.\LINKING\Listings\display.lst) OBJECT(.\LINKING\Output\display.obj)
+COMPILER INVOKED BY: C:\Program Files (x86)\KEIL_v4\C51\BIN\C51.EXE USR\display.c BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG
+                    - OBJECTEXTEND PRINT(.\LINKING\Listings\display.lst) OBJECT(.\LINKING\Output\display.obj)
 
 line level    source
 
@@ -14,18 +14,31 @@ line level    source
    4          #include<display.h>
    5          extern unsigned char buf[12];
    6          unsigned char code ascii[]={"0123456789"};
-   7          void lcd_display(int num){
-   8   1              unsigned char arrayLength;
-   9   1              unsigned char i;
-  10   1              arrayLength = LongToString(num);
-  11   1              for(i = 0; i < arrayLength; i++) {
-  12   2                      LcdWrData(ascii[buf[arrayLength-i-1]]); 
-  13   2              }
-  14   1      }
+   7          extern int temp;
+   8          extern unsigned char step;
+   9          int lcd_numdisplay(int num){
+  10   1              unsigned char arrayLength;
+  11   1              unsigned char i;
+  12   1              arrayLength = LongToString(num);
+  13   1              for(i = 0; i < arrayLength; i++) {
+  14   2                      if(step == 0 || step == 2 || step == 3)
+  15   2                              LcdWrData(ascii[buf[arrayLength-i-1]]); 
+  16   2              }
+  17   1              return arrayLength;
+  18   1      }
+  19          
+  20          void lcd_flagdisplay(int num) {
+  21   1              switch(num) {
+  22   2                      case 10: LcdWrData('+'); break;
+  23   2                      case 11: LcdWrData('-'); break;
+  24   2                      case 12: LcdWrData('*'); break;
+  25   2              }
+  26   1              step = 2;
+  27   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =     39    ----
+   CODE SIZE        =     88    ----
    CONSTANT SIZE    =     11    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

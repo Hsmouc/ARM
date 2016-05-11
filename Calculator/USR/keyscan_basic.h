@@ -1,6 +1,6 @@
-#ifndef _KEYSCAN_BASIC_H
-#define _KEYSCAN_BASIC_H
+#ifndef _KEYSCAN_BASIC_H_
+#define	_KEYSCAN_BASIC_H_
 
-int keyscan_tranfer(unsigned char);
+int keyscan_transfer(unsigned char);
 
 #endif

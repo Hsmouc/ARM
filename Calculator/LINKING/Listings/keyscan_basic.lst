@@ -1,10 +1,10 @@
-C51 COMPILER V9.01   KEYSCAN_BASIC                                                         05/10/2016 23:03:05 PAGE 1   
+C51 COMPILER V9.01   KEYSCAN_BASIC                                                         05/11/2016 18:23:41 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE KEYSCAN_BASIC
 OBJECT MODULE PLACED IN .\LINKING\Output\keyscan_basic.obj
-COMPILER INVOKED BY: C:\Keil_v4\C51\BIN\C51.EXE USR\keyscan_basic.c BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG OBJECTEXTEND 
-                    -PRINT(.\LINKING\Listings\keyscan_basic.lst) OBJECT(.\LINKING\Output\keyscan_basic.obj)
+COMPILER INVOKED BY: C:\Program Files (x86)\KEIL_v4\C51\BIN\C51.EXE USR\keyscan_basic.c BROWSE INCDIR(.\DRI;.\SYS;.\USR)
+                    - DEBUG OBJECTEXTEND PRINT(.\LINKING\Listings\keyscan_basic.lst) OBJECT(.\LINKING\Output\keyscan_basic.obj)
 
 line level    source
 
@@ -14,29 +14,33 @@ line level    source
    4          #include<keyscan_basic.h>
    5          
    6          extern unsigned char step;
-   7          int keyscan_transfer(unsigned char key) {
-   8   1              switch(key) {
-   9   2                      case 0x01:return 1; 
-  10   2                      case 0x02:return 2;
-  11   2                      case 0x03:return 3;
-  12   2                      case 0x04:step = 1; return 10;
-  13   2                      case 0x05:return 4;
-  14   2                      case 0x06:return 5;
-  15   2                      case 0x07:return 6;
-  16   2                      case 0x08:step = 1;return 11;
-  17   2                      case 0x09:return 7;
-  18   2                      case 0x10:return 8;
-  19   2                      case 0x11:return 9;
-  20   2                      case 0x12:step = 1; return 12;
-  21   2                      case 0x13:return 0;
-  22   2                      case 0x16:; step = 1; return 13;
-  23   2                      default: return 0;
-  24   2              }       
-  25   1      }
+   7          
+   8          int keyscan_transfer(unsigned char key) {
+   9   1              int keyscan_transfer = 0;
+  10   1              switch(key) {
+  11   2                      case 0x01:keyscan_transfer = 1; break; 
+  12   2                      case 0x02:keyscan_transfer = 2; break; 
+  13   2                      case 0x03:keyscan_transfer = 3; break;
+  14   2                      case 0x04:keyscan_transfer = 10; step = 1; break;
+  15   2                      case 0x05:keyscan_transfer = 4; break;
+  16   2                      case 0x06:keyscan_transfer = 5; break;
+  17   2                      case 0x07:keyscan_transfer = 6; break;
+  18   2                      case 0x08:keyscan_transfer = 11; step = 1; break;
+  19   2                      case 0x09:keyscan_transfer = 7; break;
+  20   2                      case 0x0A:keyscan_transfer = 8; break; 
+  21   2                      case 0x0B:keyscan_transfer = 9; break;
+  22   2                      case 0x0C:keyscan_transfer = 12; step = 1; break;
+  23   2                      case 0x0D:keyscan_transfer = 0; break;
+  24   2                      //case 0x0E:keyscan_transfer = 13; step = 4; break;
+  25   2                      case 0x0F:step = 3;keyscan_transfer = 14; break; 
+  26   2              }
+  27   1              return keyscan_transfer;        
+  28   1      }
+  29          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    133    ----
+   CODE SIZE        =    164    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

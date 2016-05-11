@@ -1,10 +1,10 @@
-C51 COMPILER V9.01   I2C                                                                   05/10/2016 23:03:06 PAGE 1   
+C51 COMPILER V9.01   I2C                                                                   05/11/2016 18:23:41 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE I2C
 OBJECT MODULE PLACED IN .\LINKING\Output\I2C.obj
-COMPILER INVOKED BY: C:\Keil_v4\C51\BIN\C51.EXE DRI\I2C.C BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG OBJECTEXTEND PRINT(.\LI
-                    -NKING\Listings\I2C.lst) OBJECT(.\LINKING\Output\I2C.obj)
+COMPILER INVOKED BY: C:\Program Files (x86)\KEIL_v4\C51\BIN\C51.EXE DRI\I2C.C BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG OBJ
+                    -ECTEXTEND PRINT(.\LINKING\Listings\I2C.lst) OBJECT(.\LINKING\Output\I2C.obj)
 
 line level    source
 
@@ -12,35 +12,35 @@ line level    source
    2          #include <REG52.H>
    3          #include <intrins.h>
    4          
-   5          #define  NOP()   _nop_()   /* 定义空指令 */
-   6          #define  _Nop()  _nop_()   /*定义空指令*/
+   5          #define  NOP()   _nop_()   
+   6          #define  _Nop()  _nop_()  
    7          
-   8          sbit     SCL=P1^6;     //I2C  时钟 
-   9          sbit     SDA=P1^7;     //I2C  数据 
+   8          sbit     SCL=P1^6;    
+   9          sbit     SDA=P1^7;    
   10          
-  11          bit ack;                 /*应答标志位*/
+  11          bit ack;                 
   12          
-  13          unsigned char I2C_temp[8]={"01234567"};                  //时间交换区,全局变量声明/
+  13          unsigned char I2C_temp[8]={"01234567"};                
   14          
   15          void Start_I2c()
   16          {
-  17   1              SDA=1;         /*发送起始条件的数据信号*/
+  17   1              SDA=1;         
   18   1              _Nop();
   19   1              SCL=1;
   20   1              I2C_delay(10);   
-  21   1              SDA=0;         /*发送起始信号*/
+  21   1              SDA=0;        
   22   1              I2C_delay(10);   
-  23   1              SCL=0;       /*钳住I2C总线，准备发送或接收数据 */
+  23   1              SCL=0;       
   24   1              I2C_delay(10);   
   25   1      }
   26          
   27          void Stop_I2c()
   28          {
-  29   1              SDA=0;      /*发送结束条件的数据信号*/
-  30   1              _Nop();       /*发送结束条件的时钟信号*/
-  31   1              SCL=1;      /*结束条件建立时间大于4μs*/
+  29   1              SDA=0;      
+  30   1              _Nop();      
+  31   1              SCL=1;      
   32   1              I2C_delay(10);   
-  33   1              SDA=1;      /*发送I2C总线结束信号*/
+  33   1              SDA=1;      
   34   1              I2C_delay(10);   
   35   1      }
   36          
@@ -48,25 +48,25 @@ line level    source
   38          {
   39   1              unsigned char  BitCnt;
   40   1       
-  41   1              for(BitCnt=0;BitCnt<8;BitCnt++)  /*要传送的数据长度为8位*/
+  41   1              for(BitCnt=0;BitCnt<8;BitCnt++) 
   42   1          {
-  43   2              if((c<<BitCnt)&0x80)SDA=1;   /*判断发送位*/
+  43   2              if((c<<BitCnt)&0x80)SDA=1;   
   44   2                      else  SDA=0;                
   45   2              _Nop();
-  46   2              SCL=1;               /*置时钟线为高，通知被控器开始接收数据位*/
+  46   2              SCL=1;
   47   2                      I2C_delay(10);   
   48   2              SCL=0; 
   49   2                      I2C_delay(10);   
   50   2          }
   51   1              I2C_delay(10);   
-  52   1          SDA=1;                /*8位发送完后释放数据线，准备接收应答位*/
+  52   1          SDA=1;               
   53   1              I2C_delay(10);   
   54   1          SCL=1;
-C51 COMPILER V9.01   I2C                                                                   05/10/2016 23:03:06 PAGE 2   
+C51 COMPILER V9.01   I2C                                                                   05/11/2016 18:23:41 PAGE 2   
 
   55   1              I2C_delay(10);   
   56   1          if(SDA==1)ack=0;     
-  57   1             else ack=1;        /*判断是否接收到应答信号*/
+  57   1             else ack=1;       
   58   1          SCL=0;
   59   1              I2C_delay(10);   
   60   1      }
@@ -77,16 +77,16 @@ line level    source
   65   1              unsigned char  BitCnt;
   66   1        
   67   1              retc=0; 
-  68   1              SDA=1;                       /*置数据线为输入方式*/
+  68   1              SDA=1;                     
   69   1              for(BitCnt=0;BitCnt<8;BitCnt++)
   70   1          {
   71   2                      I2C_delay(10);   
-  72   2              SCL=0;                  /*置时钟线为低，准备接收数据位*/
+  72   2              SCL=0;              
   73   2                      I2C_delay(10);   
-  74   2              SCL=1;                  /*置时钟线为高使数据线上数据有效*/
+  74   2              SCL=1;                  
   75   2                      I2C_delay(10);   
   76   2              retc=retc<<1;
-  77   2              if(SDA==1)retc=retc+1;  /*读数据位,接收的数据位放入retc中 */
+  77   2              if(SDA==1)retc=retc+1; 
   78   2                      I2C_delay(10);   
   79   2          }
   80   1              SCL=0;    
@@ -96,12 +96,12 @@ line level    source
   84          
   85          void Ack_I2c(bit a)
   86          {
-  87   1              if(a==0)SDA=0;              /*在此发出应答或非应答信号 */
+  87   1              if(a==0)SDA=0;        
   88   1                      else SDA=1;
   89   1              I2C_delay(10);   
   90   1              SCL=1;
   91   1              I2C_delay(10);   
-  92   1              SCL=0;                     /*清时钟线，钳住I2C总线以便继续接收*/
+  92   1              SCL=0;                
   93   1              I2C_delay(10);   
   94   1      }
   95          
@@ -109,47 +109,47 @@ line level    source
   97          {
   98   1              unsigned char i;
   99   1      
- 100   1              Start_I2c();               /*启动总线*/
- 101   1              SendByte(sla);             /*发送器件地址*/
+ 100   1              Start_I2c();           
+ 101   1              SendByte(sla);          
  102   1              if(ack==0)return(0);
- 103   1              SendByte(suba);            /*发送器件子地址*/
+ 103   1              SendByte(suba);          
  104   1              if(ack==0)return(0);
  105   1      
  106   1              for(i=0;i<no;i++)
  107   1              {   
- 108   2              SendByte(*s);            /*发送数据*/
+ 108   2              SendByte(*s);        
  109   2              if(ack==0)return(0);
  110   2              s++;
  111   2              } 
- 112   1              Stop_I2c();                /*结束总线*/ 
+ 112   1              Stop_I2c();                
  113   1      
  114   1              return(1);
  115   1      }
  116          
-C51 COMPILER V9.01   I2C                                                                   05/10/2016 23:03:06 PAGE 3   
+C51 COMPILER V9.01   I2C                                                                   05/11/2016 18:23:41 PAGE 3   
 
  117          bit IRcvStr(unsigned char  sla,unsigned char  suba,unsigned char  *s,unsigned char  no)
  118          {
  119   1              unsigned char i;
  120   1      
- 121   1              Start_I2c();                  /*启动总线*/
- 122   1              SendByte(sla);                /*发送器件地址*/
+ 121   1              Start_I2c();                
+ 122   1              SendByte(sla);               
  123   1              if(ack==0)return(0);
- 124   1              SendByte(suba);               /*发送器件子地址*/
+ 124   1              SendByte(suba);            
  125   1              if(ack==0)return(0);
  126   1      
- 127   1              Start_I2c();                 /*重新启动总线*/
+ 127   1              Start_I2c();                
  128   1              SendByte(sla+1);
  129   1              if(ack==0)return(0);
  130   1              for(i=0;i<no-1;i++)
  131   1              {   
- 132   2              *s=RcvByte();               /*发送数据*/
- 133   2              Ack_I2c(0);                /*发送就答位*/  
+ 132   2              *s=RcvByte();             
+ 133   2              Ack_I2c(0);                 
  134   2              s++;
  135   2              } 
  136   1              *s=RcvByte();
- 137   1              Ack_I2c(1);                   /*发送非应位*/
- 138   1              Stop_I2c();                   /*结束总线*/ 
+ 137   1              Ack_I2c(1);                   
+ 138   1              Stop_I2c();                    
  139   1              return(1);
  140   1      }
  141          

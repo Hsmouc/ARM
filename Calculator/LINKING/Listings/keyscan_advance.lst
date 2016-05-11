@@ -1,10 +1,10 @@
-C51 COMPILER V9.01   KEYSCAN_ADVANCE                                                       05/10/2016 23:03:05 PAGE 1   
+C51 COMPILER V9.01   KEYSCAN_ADVANCE                                                       05/11/2016 18:23:40 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE KEYSCAN_ADVANCE
 OBJECT MODULE PLACED IN .\LINKING\Output\keyscan_advance.obj
-COMPILER INVOKED BY: C:\Keil_v4\C51\BIN\C51.EXE USR\keyscan_advance.c BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG OBJECTEXTEN
-                    -D PRINT(.\LINKING\Listings\keyscan_advance.lst) OBJECT(.\LINKING\Output\keyscan_advance.obj)
+COMPILER INVOKED BY: C:\Program Files (x86)\KEIL_v4\C51\BIN\C51.EXE USR\keyscan_advance.c BROWSE INCDIR(.\DRI;.\SYS;.\US
+                    -R) DEBUG OBJECTEXTEND PRINT(.\LINKING\Listings\keyscan_advance.lst) OBJECT(.\LINKING\Output\keyscan_advance.obj)
 
 line level    source
 

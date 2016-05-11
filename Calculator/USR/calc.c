@@ -3,7 +3,7 @@
 #include<hc165.h>
 int num_temp = 0;
 unsigned char buf[12];
-unsigned char step = 0;
+extern unsigned char step;
 unsigned char LongToString(int dat){
     signed char i = 0;
     unsigned char len = 0;
@@ -24,20 +24,19 @@ unsigned char LongToString(int dat){
 	return len;
 }
 
-int num_transfer(unsigned char key) {
-	num_temp = num_temp*10 + keyscan_tranfer(key);
+int number_transfer(int key_transfer) {
+
+	num_temp = num_temp*10 + key_transfer;
 	return num_temp;
 }
 
-int num_calculate(unsigned char key) {
-	int data_1,data_2,result;
-	if(step == 0)
-		data_1 = num_transfer(key);
-	else
-		data_2 = num_transfer(key);
-	switch(key) {
-		case 0x80: result = data_1 + data_2; step = 0; return result;
-		default: return 0;
-	}	
+int number_calculate(int num_1, int num_2,unsigned char key) {
+	int result;
+	switch(key){
+		case 0x04: result = num_1 + num_2; break;
+		case 0x08: result = num_1 - num_2; break;
+		case 0x0C: result = num_1 * num_2; break;
+	}
+	return result;	
 } 
 

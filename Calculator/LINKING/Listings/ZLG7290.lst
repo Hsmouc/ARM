@@ -1,10 +1,10 @@
-C51 COMPILER V9.01   ZLG7290                                                               05/10/2016 23:03:06 PAGE 1   
+C51 COMPILER V9.01   ZLG7290                                                               05/11/2016 18:23:41 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE ZLG7290
 OBJECT MODULE PLACED IN .\LINKING\Output\ZLG7290.obj
-COMPILER INVOKED BY: C:\Keil_v4\C51\BIN\C51.EXE DRI\ZLG7290.c BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG OBJECTEXTEND PRINT(
-                    -.\LINKING\Listings\ZLG7290.lst) OBJECT(.\LINKING\Output\ZLG7290.obj)
+COMPILER INVOKED BY: C:\Program Files (x86)\KEIL_v4\C51\BIN\C51.EXE DRI\ZLG7290.c BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG
+                    - OBJECTEXTEND PRINT(.\LINKING\Listings\ZLG7290.lst) OBJECT(.\LINKING\Output\ZLG7290.obj)
 
 line level    source
 
@@ -62,7 +62,7 @@ line level    source
   52   2          }
   53   1          ZLG7290_WriteData(SubAdd,I2C_temp,1);
   54   1              return 1;
-C51 COMPILER V9.01   ZLG7290                                                               05/10/2016 23:03:06 PAGE 2   
+C51 COMPILER V9.01   ZLG7290                                                               05/11/2016 18:23:41 PAGE 2   
 
   55   1      }
   56          
