@@ -1,4 +1,4 @@
-C51 COMPILER V9.01   LCD                                                                   05/11/2016 18:23:41 PAGE 1   
+C51 COMPILER V9.01   LCD                                                                   05/11/2016 21:03:59 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE LCD
@@ -62,7 +62,7 @@ line level    source
   52   1              LCD_E = 1;
   53   1              x++;
   54   1              LCD_E = 0;
-C51 COMPILER V9.01   LCD                                                                   05/11/2016 18:23:41 PAGE 2   
+C51 COMPILER V9.01   LCD                                                                   05/11/2016 21:03:59 PAGE 2   
 
   55   1              Delay1ms(1);
   56   1      }
