@@ -1,15 +1,8 @@
 #ifndef  _ZLG7290_H_
 #define  _ZLG7290_H_
 
-
-extern unsigned char disp_buf[8];
-
 extern unsigned char key_code;
 extern unsigned char key_press;
-
-extern unsigned char ZLG7290_SendData(unsigned char SubAdd,unsigned char Data);
-extern void ZLG7290_SendBuf(unsigned char * disp_buf,unsigned char num);
-extern unsigned char ZLG7290_SendCmd(unsigned char Data1,unsigned char Data2);
 
 extern int ReadData_7290(int address); /*µ¥×Ö½Ú*/
 
@@ -33,14 +26,6 @@ extern void clear_zlg7290_disp(void);
 extern void  zlg7290_disp_keycode(void);
 
 void zlg7290_disp_id(void);
-
-void EEPROM(void);
-
-void led_disp(void);
-
-void led_streaming_disp(void);
-
-void chuanyi_disp(void);
 
 //extern void zlg7290_disp_clock(void);
 

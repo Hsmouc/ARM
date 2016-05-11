@@ -7,7 +7,8 @@
 #define  SubCmdBuf  0x07
 #define  SubDpRam   0x10
 
-
+unsigned char key_code=0x4d;
+unsigned char key_press=0;
 
 void ZLG7290_ReadData(unsigned char address,unsigned char num)
 {
@@ -71,15 +72,6 @@ unsigned char ZLG7290_SendCmd0(unsigned char Data1)
     return 1;
 }  
     
-
-void zlg7290_disp(void)
-{
-    char i;
-    for(i=0;i<8;i++)
-    {
-        ZLG7290_SendCmd(0x60+i,disp_buf[i]);
-    }
-}      
 
 void clear_zlg7290_disp(void)
 {

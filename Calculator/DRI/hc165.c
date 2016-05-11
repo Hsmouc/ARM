@@ -1,7 +1,7 @@
 #include<reg52.h>
-sbit hc165_sdo=P1^5;
-sbit hc165_sclk=P1^6;
-sbit hc165_pl=P1^7;
+sbit hc165_sdo=P2^5;
+sbit hc165_sclk=P2^6;
+sbit hc165_pl=P2^7;
 
 void hc165_init(){
 	hc165_sdo=1;

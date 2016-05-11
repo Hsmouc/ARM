@@ -1,6 +1,6 @@
 #ifndef _DISPLAY_H_
 #define _DISPLAY_H_
 
-void numTranfer(void);
+void lcd_display(int);
 
 #endif

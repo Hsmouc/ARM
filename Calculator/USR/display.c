@@ -1,14 +1,14 @@
 #include<hc165.h>
 #include<calc.h>
 #include<lcd.h>
-
+#include<display.h>
+extern unsigned char buf[12];
+unsigned char code ascii[]={"0123456789"};
 void lcd_display(int num){
-	unsigned char *displayArray;
 	unsigned char arrayLength;
-	unsigned int i;
-	arrayLength = LongToString(*displayArray,num);
+	unsigned char i;
+	arrayLength = LongToString(num);
 	for(i = 0; i < arrayLength; i++) {
-		LcdWrData(*displayArray);
-		displayArray++;
+		LcdWrData(ascii[buf[arrayLength-i-1]]); 
 	}
 }
