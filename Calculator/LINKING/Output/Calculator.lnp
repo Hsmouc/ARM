@@ -3,9 +3,9 @@
 ".\LINKING\Output\calc.obj",
 ".\LINKING\Output\display.obj",
 ".\LINKING\Output\keyscan_basic.obj",
-".\LINKING\Output\hc165.obj",
 ".\LINKING\Output\lcd.obj",
 ".\LINKING\Output\I2C.obj",
-".\LINKING\Output\ZLG7290.obj" 
+".\LINKING\Output\ZLG7290.obj",
+".\LINKING\Output\hc165.obj" 
 TO ".\LINKING\Output\Calculator" 
 PRINT(".\LINKING\Listings\Calculator.m51") RAMSIZE(256) 

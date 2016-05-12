@@ -21,8 +21,9 @@ int keyscan_transfer(unsigned char key) {
 		case 0x0B:keyscan_transfer = 9; break;
 		case 0x0C:keyscan_transfer = 12; step = 1; break;
 		case 0x0D:keyscan_transfer = 0; break;
-		//case 0x0E:keyscan_transfer = 13; step = 4; break;
-		case 0x0F:step = 3;keyscan_transfer = 14; break; 
+		//case 0x0E:keyscan_transfer = 15; step = 4; break;
+		case 0x0F:step = 3;keyscan_transfer = 14; break;
+		case 0x10:keyscan_transfer = 13; step = 1; break; 
 	}
 	return keyscan_transfer;	
 }

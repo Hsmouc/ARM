@@ -1,4 +1,4 @@
-C51 COMPILER V9.01   LCD                                                                   05/11/2016 21:03:59 PAGE 1   
+C51 COMPILER V9.01   LCD                                                                   05/12/2016 10:50:39 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE LCD
@@ -62,7 +62,7 @@ line level    source
   52   1              LCD_E = 1;
   53   1              x++;
   54   1              LCD_E = 0;
-C51 COMPILER V9.01   LCD                                                                   05/11/2016 21:03:59 PAGE 2   
+C51 COMPILER V9.01   LCD                                                                   05/12/2016 10:50:39 PAGE 2   
 
   55   1              Delay1ms(1);
   56   1      }
@@ -77,34 +77,11 @@ line level    source
   65   1      }
   66          
   67          void LcdInit(){
-  68   1              /*char code year []={0x04,0x0F,0x12,0x0F,0x0A,0x1F,0x02,0x02,};
-  69   1              char code month []={0x00,0x0F,0x09,0x0F,0x09,0x0F,0x09,0x13,};
-  70   1              char code day []={0x00,0x1F,0x11,0x11,0x1F,0x11,0x11,0x1F,};
-  71   1              char code path1 []={0x01,0x02,0x04,0x0A,0x02,0x02,0x02,0x02,};
-  72   1              char code path2 []={0x1E,0x02,0x1F,0x08,0x1E,0x04,0x1F,0x0A,};
-  73   1              char code path3 []={0x15,0x1F,0x00,0x1F,0x01,0x1F,0x10,0x1C,};
-  74   1              char code path4 []={0x0E,0x0A,0x0A,0x0A,0x0A,0x0A,0x0A,0x13,}; */
-  75   1              LcdWrCmd(0x38);
-  76   1              LcdWrCmd(0x0c);
-  77   1              LcdWrCmd(0x06);
-  78   1              LcdWrCmd(0x01);
-  79   1              /*Delay1ms(50);
-  80   1              LcdWrCmd(0x40);
-  81   1              for(i = 0; i < 8; i++)
-  82   1                      LcdWrData(year [i]);
-  83   1              for(i = 0; i < 8; i++)
-  84   1                      LcdWrData(month [i]);
-  85   1              for(i = 0; i < 8; i++)
-  86   1                      LcdWrData(day [i]);
-  87   1              for(i = 0; i < 8; i++)
-  88   1                      LcdWrData(path1 [i]);
-  89   1              for(i = 0; i < 8; i++)
-  90   1                      LcdWrData(path2 [i]);
-  91   1              for(i = 0; i < 8; i++)
-  92   1                      LcdWrData(path3 [i]);
-  93   1              for(i = 0; i < 8; i++)
-  94   1                      LcdWrData(path4 [i]);*/
-  95   1      }
+  68   1              LcdWrCmd(0x38);
+  69   1              LcdWrCmd(0x0c);
+  70   1              LcdWrCmd(0x06);
+  71   1              LcdWrCmd(0x01);
+  72   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE

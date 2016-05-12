@@ -6,6 +6,7 @@
 #include<I2C.h>
 #include<zlg7290.h>
 #include<keyscan_basic.h>
+#include<keyscan_advance.h>
 int tempKeytransfer_1 = 0;
 int tempNumtransfer_1 = 0;
 int tempKeytransfer_2 = 0;
@@ -23,11 +24,12 @@ void main(){
 	LcdInit();
 	while(1){
 		Read_ZLG7290Key();
-		delayMS(300);
+		delayMS(200);
+		key_function();
 		if(key_press == 1 && step == 0) {
 			key_press = 0;
 			tempKeytransfer_1 = keyscan_transfer(key_code);
-			if(key_code != 0x04 && key_code != 0x08 && key_code != 0x0C) {
+			if(key_code != 0x04 && key_code != 0x08 && key_code != 0x0C && key_code != 0x10) {
 				tempNumtransfer_1 = number_transfer(tempKeytransfer_1);
 				disp_line(0);
 				temp = lcd_numdisplay(tempNumtransfer_1);

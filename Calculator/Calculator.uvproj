@@ -377,11 +377,6 @@
           <GroupName>DRI</GroupName>
           <Files>
             <File>
-              <FileName>hc165.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\DRI\hc165.c</FilePath>
-            </File>
-            <File>
               <FileName>lcd.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\DRI\lcd.c</FilePath>
@@ -395,6 +390,11 @@
               <FileName>ZLG7290.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\DRI\ZLG7290.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc165.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DRI\hc165.c</FilePath>
             </File>
           </Files>
         </Group>

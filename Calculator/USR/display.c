@@ -22,6 +22,7 @@ void lcd_flagdisplay(int num) {
 		case 10: LcdWrData('+'); break;
 		case 11: LcdWrData('-'); break;
 		case 12: LcdWrData('*'); break;
+		case 13: LcdWrData('/'); break;
 	}
 	step = 2;
 }

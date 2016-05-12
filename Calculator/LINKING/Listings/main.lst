@@ -1,4 +1,4 @@
-C51 COMPILER V9.01   MAIN                                                                  05/11/2016 21:03:58 PAGE 1   
+C51 COMPILER V9.01   MAIN                                                                  05/12/2016 10:50:38 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
@@ -16,62 +16,64 @@ line level    source
    6          #include<I2C.h>
    7          #include<zlg7290.h>
    8          #include<keyscan_basic.h>
-   9          int tempKeytransfer_1 = 0;
-  10          int tempNumtransfer_1 = 0;
-  11          int tempKeytransfer_2 = 0;
-  12          int tempNumtransfer_2 = 0;
-  13          int resultTransfer;
-  14          int result = 0;
-  15          unsigned char step = 0;
-  16          int temp_useless;
-  17          int temp;
-  18          extern int num_temp;
-  19          void main(){
-  20   1              unsigned char tempKeycode;
-  21   1              hc165_init();
-  22   1              I2C_Init();
-  23   1              LcdInit();
-  24   1              while(1){
-  25   2                      Read_ZLG7290Key();
-  26   2                      delayMS(300);
-  27   2                      if(key_press == 1 && step == 0) {
-  28   3                              key_press = 0;
-  29   3                              tempKeytransfer_1 = keyscan_transfer(key_code);
-  30   3                              if(key_code != 0x04 && key_code != 0x08 && key_code != 0x0C) {
-  31   4                                      tempNumtransfer_1 = number_transfer(tempKeytransfer_1);
-  32   4                                      disp_line(0);
-  33   4                                      temp = lcd_numdisplay(tempNumtransfer_1);
-  34   4                                      LcdWrCmd(0x80+temp);
-  35   4                              }
-  36   3                      }
-  37   2                      if(key_press == 1 && step == 1) {
-  38   3                              key_press = 0;
-  39   3                              tempKeycode = key_code;
-  40   3                              lcd_flagdisplay(keyscan_transfer(key_code));
-  41   3                              num_temp = 0;
-  42   3                      }
-  43   2                      if(key_press == 1 && step == 2) {
-  44   3                              key_press = 0;
-  45   3                              tempKeytransfer_2 = keyscan_transfer(key_code);
-  46   3                              if(key_code != 0x0F){
-  47   4                                      tempNumtransfer_2 = number_transfer(tempKeytransfer_2);
-  48   4                                      LcdWrCmd(0x80+temp+1);
-  49   4                                      temp_useless = lcd_numdisplay(tempNumtransfer_2);
-  50   4                              }
-  51   3                      }
-  52   2                      if(step == 3){  
-  53   3                              result = number_calculate(tempNumtransfer_1,tempNumtransfer_2,tempKeycode);
-  54   3                              disp_line(1);
-C51 COMPILER V9.01   MAIN                                                                  05/11/2016 21:03:58 PAGE 2   
+   9          #include<keyscan_advance.h>
+  10          int tempKeytransfer_1 = 0;
+  11          int tempNumtransfer_1 = 0;
+  12          int tempKeytransfer_2 = 0;
+  13          int tempNumtransfer_2 = 0;
+  14          int resultTransfer;
+  15          int result = 0;
+  16          unsigned char step = 0;
+  17          int temp_useless;
+  18          int temp;
+  19          extern int num_temp;
+  20          void main(){
+  21   1              unsigned char tempKeycode;
+  22   1              hc165_init();
+  23   1              I2C_Init();
+  24   1              LcdInit();
+  25   1              while(1){
+  26   2                      Read_ZLG7290Key();
+  27   2                      delayMS(200);
+  28   2                      key_function();
+  29   2                      if(key_press == 1 && step == 0) {
+  30   3                              key_press = 0;
+  31   3                              tempKeytransfer_1 = keyscan_transfer(key_code);
+  32   3                              if(key_code != 0x04 && key_code != 0x08 && key_code != 0x0C && key_code != 0x10) {
+  33   4                                      tempNumtransfer_1 = number_transfer(tempKeytransfer_1);
+  34   4                                      disp_line(0);
+  35   4                                      temp = lcd_numdisplay(tempNumtransfer_1);
+  36   4                                      LcdWrCmd(0x80+temp);
+  37   4                              }
+  38   3                      }
+  39   2                      if(key_press == 1 && step == 1) {
+  40   3                              key_press = 0;
+  41   3                              tempKeycode = key_code;
+  42   3                              lcd_flagdisplay(keyscan_transfer(key_code));
+  43   3                              num_temp = 0;
+  44   3                      }
+  45   2                      if(key_press == 1 && step == 2) {
+  46   3                              key_press = 0;
+  47   3                              tempKeytransfer_2 = keyscan_transfer(key_code);
+  48   3                              if(key_code != 0x0F){
+  49   4                                      tempNumtransfer_2 = number_transfer(tempKeytransfer_2);
+  50   4                                      LcdWrCmd(0x80+temp+1);
+  51   4                                      temp_useless = lcd_numdisplay(tempNumtransfer_2);
+  52   4                              }
+  53   3                      }
+  54   2                      if(step == 3){  
+C51 COMPILER V9.01   MAIN                                                                  05/12/2016 10:50:38 PAGE 2   
 
-  55   3                              temp_useless = lcd_numdisplay(result);  
-  56   3                      }
-  57   2              }
-  58   1      }
+  55   3                              result = number_calculate(tempNumtransfer_1,tempNumtransfer_2,tempKeycode);
+  56   3                              disp_line(1);
+  57   3                              temp_useless = lcd_numdisplay(result);  
+  58   3                      }
+  59   2              }
+  60   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    217    ----
+   CODE SIZE        =    226    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

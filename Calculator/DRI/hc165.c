@@ -1,4 +1,5 @@
 #include<reg52.h>
+#include<hc165.h>
 sbit hc165_sdo=P2^5;
 sbit hc165_sclk=P2^6;
 sbit hc165_pl=P2^7;

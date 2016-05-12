@@ -36,6 +36,7 @@ int number_calculate(int num_1, int num_2,unsigned char key) {
 		case 0x04: result = num_1 + num_2; break;
 		case 0x08: result = num_1 - num_2; break;
 		case 0x0C: result = num_1 * num_2; break;
+		case 0x10: result = num_1 / num_2; break;
 	}
 	return result;	
 } 

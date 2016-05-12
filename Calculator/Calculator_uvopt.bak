@@ -184,12 +184,12 @@
       <GroupNumber>1</GroupNumber>
       <FileNumber>1</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>29</ColumnNumber>
+      <ColumnNumber>14</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>25</TopLine>
-      <CurrentLine>43</CurrentLine>
+      <TopLine>12</TopLine>
+      <CurrentLine>28</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\USR\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -200,10 +200,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>58</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>2</CurrentLine>
+      <CurrentLine>16</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\USR\keyscan_advance.c</PathWithFileName>
       <FilenameWithoutPath>keyscan_advance.c</FilenameWithoutPath>
@@ -214,10 +214,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>31</ColumnNumber>
+      <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>27</TopLine>
-      <CurrentLine>28</CurrentLine>
+      <TopLine>18</TopLine>
+      <CurrentLine>18</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\USR\calc.c</PathWithFileName>
       <FilenameWithoutPath>calc.c</FilenameWithoutPath>
@@ -226,12 +226,12 @@
       <GroupNumber>1</GroupNumber>
       <FileNumber>4</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>26</ColumnNumber>
+      <ColumnNumber>14</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>2</TopLine>
-      <CurrentLine>22</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>9</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\USR\display.c</PathWithFileName>
       <FilenameWithoutPath>display.c</FilenameWithoutPath>
@@ -263,13 +263,13 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>16</ColumnNumber>
+      <ColumnNumber>9</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>4</CurrentLine>
+      <TopLine>47</TopLine>
+      <CurrentLine>71</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\DRI\hc165.c</PathWithFileName>
-      <FilenameWithoutPath>hc165.c</FilenameWithoutPath>
+      <PathWithFileName>.\DRI\lcd.c</PathWithFileName>
+      <FilenameWithoutPath>lcd.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
@@ -277,13 +277,13 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>31</ColumnNumber>
+      <ColumnNumber>27</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>55</TopLine>
-      <CurrentLine>79</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\DRI\lcd.c</PathWithFileName>
-      <FilenameWithoutPath>lcd.c</FilenameWithoutPath>
+      <PathWithFileName>.\DRI\I2C.C</PathWithFileName>
+      <FilenameWithoutPath>I2C.C</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
@@ -293,53 +293,27 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>142</TopLine>
-      <CurrentLine>150</CurrentLine>
+      <TopLine>34</TopLine>
+      <CurrentLine>38</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\DRI\I2C.C</PathWithFileName>
-      <FilenameWithoutPath>I2C.C</FilenameWithoutPath>
+      <PathWithFileName>.\DRI\ZLG7290.c</PathWithFileName>
+      <FilenameWithoutPath>ZLG7290.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
       <FileNumber>9</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>17</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>38</TopLine>
-      <CurrentLine>42</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>22</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\DRI\ZLG7290.c</PathWithFileName>
-      <FilenameWithoutPath>ZLG7290.c</FilenameWithoutPath>
+      <PathWithFileName>.\DRI\hc165.c</PathWithFileName>
+      <FilenameWithoutPath>hc165.c</FilenameWithoutPath>
     </File>
   </Group>
-
-  <AlienFiles>
-    <PathWithFilename>\\psf\Home\Desktop\Calculator\USR\DISPLAY.H</PathWithFilename>
-    <TopLine>1</TopLine>
-    <CurrentLine>4</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
 
   <AlienFiles>
     <PathWithFilename>\\psf\Home\Desktop\Calculator\DRI\LCD.H</PathWithFilename>
@@ -397,6 +371,110 @@
     <PathWithFilename>\\psf\Home\Desktop\Calculator\USR\CALC.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>6</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>\\psf\Home\Desktop\Calculator\USR\KEYSCAN_ADVANCE.H</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>4</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>\\psf\Home\Desktop\Calculator\DRI\ZLG7290.H</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>10</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>\\psf\Home\Desktop\Calculator\USR\DISPLAY.H</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>8</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>\\psf\Home\Desktop\Calculator\DRI\HC165.H</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>4</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1760,19 +1838,79 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>1</ActiveTab>
+      <ActiveTab>8</ActiveTab>
       <Documents>
         <Doc>
+          <Name>.\DRI\HC165.H</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>4</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\USR\keyscan_basic.c</Name>
+          <ColumnNumber>44</ColumnNumber>
+          <TopLine>5</TopLine>
+          <CurrentLine>25</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\USR\display.c</Name>
+          <ColumnNumber>14</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>9</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\DRI\lcd.c</Name>
+          <ColumnNumber>9</ColumnNumber>
+          <TopLine>47</TopLine>
+          <CurrentLine>71</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\DRI\hc165.c</Name>
+          <ColumnNumber>17</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>22</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\USR\DISPLAY.H</Name>
+          <ColumnNumber>12</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>8</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\DRI\ZLG7290.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>34</TopLine>
+          <CurrentLine>38</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\DRI\ZLG7290.H</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>10</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\USR\keyscan_advance.c</Name>
+          <ColumnNumber>58</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>16</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\USR\KEYSCAN_ADVANCE.H</Name>
+          <ColumnNumber>5</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>4</CurrentLine>
+        </Doc>
+        <Doc>
           <Name>.\USR\main.c</Name>
-          <ColumnNumber>29</ColumnNumber>
-          <TopLine>25</TopLine>
-          <CurrentLine>43</CurrentLine>
+          <ColumnNumber>14</ColumnNumber>
+          <TopLine>12</TopLine>
+          <CurrentLine>28</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\USR\calc.c</Name>
-          <ColumnNumber>31</ColumnNumber>
-          <TopLine>27</TopLine>
-          <CurrentLine>28</CurrentLine>
+          <ColumnNumber>16</ColumnNumber>
+          <TopLine>18</TopLine>
+          <CurrentLine>18</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\USR\CALC.H</Name>
@@ -1782,15 +1920,9 @@
         </Doc>
         <Doc>
           <Name>.\DRI\I2C.C</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>142</TopLine>
-          <CurrentLine>150</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\USR\display.c</Name>
-          <ColumnNumber>26</ColumnNumber>
-          <TopLine>2</TopLine>
-          <CurrentLine>22</CurrentLine>
+          <ColumnNumber>27</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\USR\KEYSCAN_BASIC.H</Name>
@@ -1803,30 +1935,6 @@
           <ColumnNumber>13</ColumnNumber>
           <TopLine>1</TopLine>
           <CurrentLine>6</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\DRI\lcd.c</Name>
-          <ColumnNumber>31</ColumnNumber>
-          <TopLine>55</TopLine>
-          <CurrentLine>79</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\DRI\ZLG7290.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>38</TopLine>
-          <CurrentLine>42</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\USR\keyscan_basic.c</Name>
-          <ColumnNumber>44</ColumnNumber>
-          <TopLine>5</TopLine>
-          <CurrentLine>25</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\USR\DISPLAY.H</Name>
-          <ColumnNumber>3</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>4</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>
