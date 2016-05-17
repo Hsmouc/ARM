@@ -1,4 +1,4 @@
-C51 COMPILER V9.01   CALC                                                                  05/12/2016 10:50:38 PAGE 1   
+C51 COMPILER V9.01   CALC                                                                  05/17/2016 00:29:42 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE CALC
@@ -12,58 +12,65 @@ line level    source
    2          #include<keyscan_basic.h>
    3          #include<hc165.h>
    4          int num_temp = 0;
-   5          unsigned char buf[12];
-   6          extern unsigned char step;
-   7          unsigned char LongToString(int dat){
-   8   1          signed char i = 0;
-   9   1          unsigned char len = 0;
-  10   1         
-  11   1          if (dat < 0){
-  12   2              dat = -dat;
-  13   2              buf[0] = '-';
-  14   2                      i++;
-  15   2                      len++;
-  16   2          }
-  17   1         
-  18   1          do {
-  19   2              buf[i] = dat % 10;
-  20   2                      i++;
-  21   2              dat /= 10;
-  22   2          } while (dat > 0);
-  23   1          len += i; 
-  24   1              return len;
-  25   1      }
-  26          
-  27          int number_transfer(int key_transfer) {
-  28   1      
-  29   1              num_temp = num_temp*10 + key_transfer;
-  30   1              return num_temp;
-  31   1      }
-  32          
-  33          int number_calculate(int num_1, int num_2,unsigned char key) {
-  34   1              int result;
-  35   1              switch(key){
-  36   2                      case 0x04: result = num_1 + num_2; break;
-  37   2                      case 0x08: result = num_1 - num_2; break;
-  38   2                      case 0x0C: result = num_1 * num_2; break;
-  39   2                      case 0x10: result = num_1 / num_2; break;
-  40   2              }
-  41   1              return result;  
-  42   1      } 
-  43          
+   5          int dec_temp = 0;
+   6          unsigned char buf[12];
+   7          extern unsigned char step;
+   8          unsigned char LongToString(int dat){
+   9   1          signed char i = 0;
+  10   1          unsigned char len = 0;
+  11   1         
+  12   1          if (dat < 0){
+  13   2              dat = -dat;
+  14   2              buf[0] = '-';
+  15   2                      i++;
+  16   2                      len++;
+  17   2          }
+  18   1         
+  19   1          do {
+  20   2              buf[i] = dat % 10;
+  21   2                      i++;
+  22   2              dat /= 10;
+  23   2          } while (dat > 0);
+  24   1          len += i; 
+  25   1              return len;
+  26   1      }
+  27          
+  28          int number_transfer(int key_transfer) {
+  29   1      
+  30   1              num_temp = num_temp*10 + key_transfer;
+  31   1              return num_temp;
+  32   1      }
+  33          
+  34          int number_calculate(int num_1, int num_2,unsigned char key) {
+  35   1              int result;
+  36   1              switch(key){
+  37   2                      case 0x04: result = num_1 + num_2; break;
+  38   2                      case 0x08: result = num_1 - num_2; break;
+  39   2                      case 0x0C: result = num_1 * num_2; break;
+  40   2                      case 0x10: result = num_1 / num_2; break;
+  41   2              }
+  42   1              return result;  
+  43   1      }
+  44          
+  45          int decimal_transfer(int key_transfer) {
+  46   1      
+  47   1              dec_temp = dec_temp * 10 + key_transfer;        
+  48   1              return dec_temp;
+  49   1      
+  50   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    183    ----
+   CODE SIZE        =    210    ----
+C51 COMPILER V9.01   CALC                                                                  05/17/2016 00:29:42 PAGE 2   
+
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =     14       6
+   DATA SIZE        =     16       6
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
-
-C51 COMPILER V9.01   CALC                                                                  05/12/2016 10:50:38 PAGE 2   
 
 
 C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -2,6 +2,8 @@
 #include<calc.h>
 #include<lcd.h>
 #include<display.h>
+
+unsigned char state = 0;
 extern unsigned char buf[12];
 unsigned char code ascii[]={"0123456789"};
 extern int temp;
@@ -25,4 +27,8 @@ void lcd_flagdisplay(int num) {
 		case 13: LcdWrData('/'); break;
 	}
 	step = 2;
+}
+
+void decimal_display(void) {
+		LcdWrData('.');
 }

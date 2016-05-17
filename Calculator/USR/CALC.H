@@ -4,5 +4,6 @@
 unsigned char LongToString(int);
 int number_transfer(int);
 int number_calculate(int,int,unsigned char);
+int decimal_transfer(int);
 
 #endif

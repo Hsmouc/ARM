@@ -2,6 +2,7 @@
 #include<keyscan_basic.h>
 #include<hc165.h>
 int num_temp = 0;
+int dec_temp = 0;
 unsigned char buf[12];
 extern unsigned char step;
 unsigned char LongToString(int dat){
@@ -39,5 +40,11 @@ int number_calculate(int num_1, int num_2,unsigned char key) {
 		case 0x10: result = num_1 / num_2; break;
 	}
 	return result;	
-} 
+}
 
+int decimal_transfer(int key_transfer) {
+
+	dec_temp = dec_temp * 10 + key_transfer;	
+	return dec_temp;
+
+}
