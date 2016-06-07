@@ -1,0 +1,52 @@
+C51 COMPILER V9.01   HC165                                                                 06/06/2016 22:36:52 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE HC165
+OBJECT MODULE PLACED IN .\LINKING\hc165.obj
+COMPILER INVOKED BY: C:\Program Files (x86)\KEIL_v4\C51\BIN\C51.EXE DRI\hc165.c BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG O
+                    -BJECTEXTEND PRINT(.\LINKING\hc165.lst) OBJECT(.\LINKING\hc165.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include<hc165.h>
+   3          sbit hc165_sdo=P2^5;
+   4          sbit hc165_sclk=P2^6;
+   5          sbit hc165_pl=P2^7;
+   6          
+   7          void hc165_init(){
+   8   1              hc165_sdo=1;
+   9   1              hc165_sclk=0;
+  10   1              hc165_pl=1;
+  11   1      }
+  12          
+  13          unsigned char hc165_re(void){
+  14   1              unsigned i,x=0;
+  15   1              hc165_pl=0;
+  16   1              x=x+0;
+  17   1              hc165_pl=1;
+  18   1              if( hc165_sdo == 1 )
+  19   1                      x = x + 1;
+  20   1              for( i = 0;i < 7;i ++){
+  21   2                      hc165_sclk=1;
+  22   2                      x = x << 1;
+  23   2                      hc165_sclk=0;
+  24   2                      if( hc165_sdo == 1 )
+  25   2                              x = x + 1;
+  26   2              }
+  27   1              return x;
+  28   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     56    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

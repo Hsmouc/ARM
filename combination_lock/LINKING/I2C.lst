@@ -1,0 +1,161 @@
+C51 COMPILER V9.01   I2C                                                                   06/06/2016 22:36:52 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE I2C
+OBJECT MODULE PLACED IN .\LINKING\I2C.obj
+COMPILER INVOKED BY: C:\Program Files (x86)\KEIL_v4\C51\BIN\C51.EXE DRI\I2C.C BROWSE INCDIR(.\DRI;.\SYS;.\USR) DEBUG OBJ
+                    -ECTEXTEND PRINT(.\LINKING\I2C.lst) OBJECT(.\LINKING\I2C.obj)
+
+line level    source
+
+   1          #include  "I2C.H"
+   2          #include <REG52.H>
+   3          #include <intrins.h>
+   4          
+   5          #define  NOP()   _nop_()   
+   6          #define  _Nop()  _nop_()  
+   7          
+   8          sbit     SCL=P1^6;    
+   9          sbit     SDA=P1^7;    
+  10          
+  11          bit ack;                 
+  12          
+  13          unsigned char I2C_temp[8]={"01234567"};                
+  14          
+  15          void Start_I2c()
+  16          {
+  17   1              SDA=1;         
+  18   1              _Nop();
+  19   1              SCL=1;
+  20   1              I2C_delay(10);   
+  21   1              SDA=0;        
+  22   1              I2C_delay(10);   
+  23   1              SCL=0;       
+  24   1              I2C_delay(10);   
+  25   1      }
+  26          
+  27          void Stop_I2c()
+  28          {
+  29   1              SDA=0;      
+  30   1              _Nop();      
+  31   1              SCL=1;      
+  32   1              I2C_delay(10);   
+  33   1              SDA=1;      
+  34   1              I2C_delay(10);   
+  35   1      }
+  36          
+  37          void  SendByte(unsigned char  c)
+  38          {
+  39   1              unsigned char  BitCnt;
+  40   1       
+  41   1              for(BitCnt=0;BitCnt<8;BitCnt++) 
+  42   1          {
+  43   2              if((c<<BitCnt)&0x80)SDA=1;   
+  44   2                      else  SDA=0;                
+  45   2              _Nop();
+  46   2              SCL=1;
+  47   2                      I2C_delay(10);   
+  48   2              SCL=0; 
+  49   2                      I2C_delay(10);   
+  50   2          }
+  51   1              I2C_delay(10);   
+  52   1          SDA=1;               
+  53   1              I2C_delay(10);   
+  54   1          SCL=1;
+C51 COMPILER V9.01   I2C                                                                   06/06/2016 22:36:52 PAGE 2   
+
+  55   1              I2C_delay(10);   
+  56   1          if(SDA==1)ack=0;     
+  57   1             else ack=1;       
+  58   1          SCL=0;
+  59   1              I2C_delay(10);   
+  60   1      }
+  61             
+  62          unsigned char   RcvByte()
+  63          {
+  64   1              unsigned char  retc;
+  65   1              unsigned char  BitCnt;
+  66   1        
+  67   1              retc=0; 
+  68   1              SDA=1;                     
+  69   1              for(BitCnt=0;BitCnt<8;BitCnt++)
+  70   1          {
+  71   2                      I2C_delay(10);   
+  72   2              SCL=0;              
+  73   2                      I2C_delay(10);   
+  74   2              SCL=1;                  
+  75   2                      I2C_delay(10);   
+  76   2              retc=retc<<1;
+  77   2              if(SDA==1)retc=retc+1; 
+  78   2                      I2C_delay(10);   
+  79   2          }
+  80   1              SCL=0;    
+  81   1              I2C_delay(10);   
+  82   1              return(retc);
+  83   1      }
+  84          
+  85          void Ack_I2c(bit a)
+  86          {
+  87   1              if(a==0)SDA=0;        
+  88   1                      else SDA=1;
+  89   1              I2C_delay(10);   
+  90   1              SCL=1;
+  91   1              I2C_delay(10);   
+  92   1              SCL=0;                
+  93   1              I2C_delay(10);   
+  94   1      }
+  95          
+  96          
+  97          bit IRcvStr(unsigned char  sla,unsigned char  suba,unsigned char  *s,unsigned char  no)
+  98          {
+  99   1              unsigned char i;
+ 100   1      
+ 101   1              Start_I2c();                
+ 102   1              SendByte(sla);               
+ 103   1              if(ack==0)return(0);
+ 104   1              SendByte(suba);            
+ 105   1              if(ack==0)return(0);
+ 106   1      
+ 107   1              Start_I2c();                
+ 108   1              SendByte(sla+1);
+ 109   1              if(ack==0)return(0);
+ 110   1              for(i=0;i<no-1;i++)
+ 111   1              {   
+ 112   2              *s=RcvByte();             
+ 113   2              Ack_I2c(0);                 
+ 114   2              s++;
+ 115   2              } 
+ 116   1              *s=RcvByte();
+C51 COMPILER V9.01   I2C                                                                   06/06/2016 22:36:52 PAGE 3   
+
+ 117   1              Ack_I2c(1);                   
+ 118   1              Stop_I2c();                    
+ 119   1              return(1);
+ 120   1      }
+ 121          
+ 122          void I2C_Init(void)
+ 123          {
+ 124   1          SCL=1;
+ 125   1          SDA=1;
+ 126   1      }
+ 127          
+ 128          void I2C_delay(unsigned char dly)
+ 129          {
+ 130   1              while(dly--);
+ 131   1      }
+ 132          
+ 133          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    325    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      8      11
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1       1
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
